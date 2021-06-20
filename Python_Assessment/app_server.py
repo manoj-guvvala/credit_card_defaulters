@@ -167,7 +167,7 @@ def get_posts():
 # Edit a post
 @app.route('/edit_post/<string:title>', methods=['GET', 'POST'])
 @is_logged_in
-def edit_article(title):
+def edit_post(title):
 
     if request.method == 'POST':
         # Create Cursor
@@ -188,7 +188,7 @@ def edit_article(title):
 # Delete Post
 @app.route('/delete_post/<string:title>', methods=['POST'])
 # @is_logged_in
-def delete_article(title):
+def delete_post(title):
     # Create cursor
     cur = mysql.connection.cursor()
 
